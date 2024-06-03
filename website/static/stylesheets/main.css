@@ -620,11 +620,13 @@ body {
     color: #b1b1b1;
     font-size: 0.8rem;
 }
-.login-container .row1{
-display: flex;
-align-items: center;
-justify-content: space-around;
+
+.login-container .row1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
+
 .login-container #regis-p {
     font-size: 0.8rem;
 }
@@ -652,4 +654,64 @@ justify-content: space-around;
     height: 100%;
 }
 
-/*  ==========================LOGIN FORM ENDS  /////////////////////////////////// */
+/*  ========================== REGISTERPAGE  ========================== */
+
+.register-container {
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: #f7f7f7;
+}
+
+.register-container .row {
+    width: 700px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.register-container .login-btn {
+    background-color: #ff6200;
+    color: white;
+    width: 100%;
+    margin-top: 15px;
+    transition: all 0.2s;
+}
+
+.register-container .login-btn:hover {
+    background-color: #e25700;
+    color: white;
+}
+
+#registerform .form-group label {
+    color: #b1b1b1;
+    font-size: 0.8rem;
+}
+
+.register-container .row1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.register-container #regis-p {
+    font-size: 0.8rem;
+}
+
+.register-container .form-title {
+    margin-bottom: 20px;
+}
+
+.register-container .form-link {
+    color: #007bff;
+    text-decoration: none;
+    font-size: 0.9rem;
+
+}
+
+.register-container .form-link:hover {
+    text-decoration: underline;
+}

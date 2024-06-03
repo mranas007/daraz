@@ -33,6 +33,29 @@ CREATE TABLE admin_users (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
+-- Create customers table
+CREATE TABLE `customers` (
+    `customer_id` INT AUTO_INCREMENT PRIMARY KEY,
+    `name` VARCHAR(100) NOT NULL,
+    `email` VARCHAR(100) NOT NULL UNIQUE,
+    `address` TEXT NOT NULL,
+    `phone` VARCHAR(15) NOT NULL
+);
+
+-- Create orders table
+CREATE TABLE `orders` (
+    `order_id` INT AUTO_INCREMENT PRIMARY KEY,
+    `customer_id` INT NOT NULL,
+    `product_id` INT NOT NULL,
+    `quantity` INT NOT NULL,
+    `total_price` DECIMAL(10, 2) NOT NULL,
+    `order_date` DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    `order_status` ENUM('pending', 'processing', 'completed', 'cancelled') NOT NULL DEFAULT 'pending',
+    `created_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    `updated_at` TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+    FOREIGN KEY (`customer_id`) REFERENCES `customers`(`customer_id`),
+    FOREIGN KEY (`product_id`) REFERENCES `products`(`product_id`)
+);
 
 -- some product data query for demo
 INSERT INTO `products`(`name`, `description`, `image_url`, `original_price`, `discounted_price`)
@@ -54,5 +77,4 @@ VALUES ('Wireless Headphones', 'Superior sound quality with comfortable design',
   ('Laptop Stand', 'Improve your posture and comfort', 'https://images.unsplash.com/photo-1575399545768-5f1840c1312d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OHx8TGFwdG9wJTIwU3RhbmR8ZW58MHx8MHx8fDA%3D', 20.00, 15.00),
   ('Gaming Mouse', 'Enhance your gaming precision', 'https://images.unsplash.com/photo-1629429408209-1f912961dbd8?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8R2FtaW5nJTIwTW91c2V8ZW58MHx8MHx8fDA%3D', 50.00, 40.00),
   ('Desk Lamp', 'Light up your workspace for better productivity', 'https://images.unsplash.com/photo-1601642964568-1917224f4e4d?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8RGVzayUyMExhbXB8ZW58MHx8MHx8fDA%3D', 30.00, 25.00),
-  ('Fitness Tracker', 'Track your steps, calories, and sleep', 'https://images.unsplash.com/photo-1576243345690-4e4b79b63288?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Rml0bmVzcyUyMFRyYWNrZXJ8ZW58MHx8MHx8fDA%3D', 120.00, 100.00 )
-  
+  ('Fitness Tracker', 'Track your steps, calories, and sleep', 'https://images.unsplash.com/photo-1576243345690-4e4b79b63288?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8Rml0bmVzcyUyMFRyYWNrZXJ8ZW58MHx8MHx8fDA%3D', 120.00, 100.00 )  
