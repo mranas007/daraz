@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+/* ================================= INDEX PAGE ============================== */
+.sidebar {
+    height: 100vh;
+    background-color: #343a40;
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    width: 250px;
+}
+
+.sidebar a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    padding: 10px 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar .active,
+.sidebar a:hover {
+    background-color: #495057;
+    border-radius: 5px;
+}
+
+.main-content {
+    margin-left: 250px;
+    padding: 20px;
+}
+
+.top-bar {
+    background-color: #ff6200;
+    color: #fff;
+    padding: 10px;
+    margin-left: 250px;
+}
+
+.login-top-bar {
+    width: 100%;
+    background-color: #ff6200;
+    color: #fff;
+    padding: 10px;
+}
+
+.top-bar h1 {
+    margin: 0;
+}
+
+#index-top-bar {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* ================================= DASHBOARD PAGE ============================== */
+
+
+.top-bar h1 {
+    margin: 0;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.table-responsive {
+    margin-top: 20px;
+}
+
+/* ================================= MANAGE PRODUCTS PAGE ============================== */
+
+.top-bar h1 {
+    margin: 0;
+}
+
+.manage-products-page .card {
+    margin-bottom: 20px;
+}
+
+.manage-products-page .table-responsive {
+    margin-top: 20px;
+}
+
+.manage-products-page .table-responsive .table-striped thead  {
+    background-color: #000000;
+}
+
+/* ================================= EDIT PRODUCTS PAGE ============================== */
+
+.edit-product-page .card {
+    margin-bottom: 20px;
+}
+
+
+/* ================================= DELETE PRODUCTS PAGE ============================== */
+.delete-product-page .card {
+    margin-bottom: 20px;
+}
+
+/* ================================= MANAGE USERS PAGE ============================== */
+
+.manage-users-page .card {
+    margin-bottom: 20px;
+}
+
+.manage-users-page .table-responsive {
+    margin-top: 20px;
+}
+
+/* ================================= SETTINGS PAGE ============================== */
+
+.settings-page .card {
+    margin-bottom: 20px;
+}
+
+
+/* ================================= login PAGE ============================== */
+
+.login-container {
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f7f7f7;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.login-card h3 {
+    margin-bottom: 20px;
+}
+
+.login-card .btn-primary {
+    background-color: #ff6200;
+    border-color: #ff6200;
+}
+
+.login-card .btn-primary:hover {
+    background-color: #e55b00;
+    border-color: #e55b00;
+}
