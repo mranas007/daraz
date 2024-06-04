@@ -23,6 +23,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <a href="dashboard.php">Dashboard</a>
         <a class="active" href="manage-products.php">Manage Products</a>
         <a href="manage-users.php">Manage Users</a>
+        <a href="manage-cutomers.php">Manage Customer</a>
         <a href="settings.php">Settings</a>
     </div>
 

@@ -90,8 +90,9 @@
     margin-top: 20px;
 }
 
-.manage-products-page .table-responsive .table-striped thead  {
-    background-color: #000000;
+.manage-products-page .table-responsive .table-striped thead {
+    background-color: #4a4a4a;
+    color: #fff;
 }
 
 /* ================================= EDIT PRODUCTS PAGE ============================== */

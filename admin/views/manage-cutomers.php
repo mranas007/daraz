@@ -22,8 +22,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
         <h2>Admin Panel</h2>
         <a href="dashboard.php">Dashboard</a>
         <a href="manage-products.php">Manage Products</a>
-        <a class="active" href="manage-users.php">Manage Admin Users</a>
-        <a href="manage-cutomers.php">Manage Customer</a>
+        <a href="manage-users.php">Manage Admin Users</a>
+        <a class="active" href="manage-cutomers.php">Manage Customer</a>
         <a href="settings.php">Settings</a>
     </div>
 

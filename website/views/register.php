@@ -19,14 +19,30 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <form id="registerform">
+                    <form action="../controllers/register.php" method="POST" id="registerform">
                         <div class="form-group">
-                            <label for="email">Phone Number or Email*</label>
-                            <input type="email" class="form-control" id="email" placeholder="Please enter your Phone Number or Email">
+                            <label for="name">Name:</label>
+                            <input type="text" name="name" class="form-control" id="name" placeholder="Name" required>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password*</label>
-                            <input type="password" class="form-control" id="password" placeholder="Please enter your password">
+                            <label for="email">Email:</label>
+                            <input type="email" name="email" class="form-control" id="email" placeholder="Email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">Address:</label>
+                            <input type="text" name="address" class="form-control" id="address" placeholder="Address" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phonenumber">Phone Number:</label>
+                            <input type="tel" name="phonenumber" class="form-control" id="phonenumber" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="password">Password:</label>
+                            <input type="password" name="password" class="form-control" id="password" placeholder="password" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cpassword">Confirm Password:</label>
+                            <input type="password" name="cpassword" class="form-control" id="cpassword" placeholder="Confirm password" required>
                         </div>
                         <button type="submit" class="btn login-btn mb-2">LOGIN</button>
                     </form>
