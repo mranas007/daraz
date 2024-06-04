@@ -1,3 +1,10 @@
+<?php session_start();
+if ($_SESSION['isloggedin'] !== true) {
+   header("location: login.php");
+   exit; 
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -10,7 +17,6 @@
     <!-- ====================================================== header  -->
     <header>
         <section id="navbar">
-
 
             <div class="first-header-panel">
                 <ul>
@@ -44,9 +50,10 @@
                     </div>
 
                     <div id="navuser">
-                        <span class="user-hover"><i class="fa-solid fa-user"></i><a href="#">Login</a></span>
-                        <span>|</span>
-                        <span class="user-hover"><a href="#">Sign Up</a></span>
+                        <span style=""><a href="#"><?php //require '../../controllers/custmer.php';
+                                                                while ($row = $name->fetch_assoc()) {
+                                                                    echo $row['email'];
+                                                                } ?></a></span>
                         <span class="user-hover"><i class="fa-solid fa-globe"></i> EN</span>
                         <span class="user-hover"><i class="fa-solid fa-cart-shopping"></i></span>
                     </div>

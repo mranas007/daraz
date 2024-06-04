@@ -57,7 +57,7 @@
                     <div id="navuser">
                         <span class="user-hover"><i class="fa-solid fa-user"></i><a href="#">Login</a></span>
                         <span>|</span>
-                        <span class="user-hover"><a href="#">Sign Up</a></span>
+                        <span class="user-hover"><a href="website/views/register.php">Sign Up</a></span>
                         <span class="user-hover"><i class="fa-solid fa-globe"></i> EN</span>
                         <span class="user-hover"><i class="fa-solid fa-cart-shopping"></i></span>
                     </div>

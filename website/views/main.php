@@ -19,6 +19,7 @@
 
 <body>
     <!-- navbar -->
+    <?php require '../controllers/custmer.php';?>
     <?php require 'partials/navbar.php'; ?>
     <!-- =============================================================== main  -->
     <main>
@@ -28,8 +29,8 @@
             <p class="h4">Just For You</p>
 
             <?php
-            require('../database/db.php');
-            require('../models/product.model.php');
+            require_once('../database/db.php');
+            require_once('../models/product.model.php');
 
             $database = new Database();
             $db = $database->getConnection();

@@ -18,12 +18,23 @@ class Customer
 
             $stmt->bind_param('sssis', $name, $email, $address, $phone, $hashed_password);
             if ($stmt->execute()) {
+                session_start();
+                $_SESSION['loggedin'] = true;
+                $_SESSION['email'] = $email;
                 return true;
             }
             $stmt->close();
         } else {
 
             echo "Error preparing statement: " . $this->conn->error;
+        }
+    }
+
+    public function read($customer)
+    {
+        if (!empty($customer)) {
+            $query = "SELECT * FROM `customers` where email = '$customer'";
+            return $this->conn->query($query);
         }
     }
 }
