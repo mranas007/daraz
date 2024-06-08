@@ -1,3 +1,10 @@
+<?php
+// session_start();
+// if ($_SESSION['isloggedin'] !== true) {
+//     header("location: login.php");
+//     exit;
+// }
+?>
 <!doctype html>
 <html lang="en">
 
@@ -19,8 +26,8 @@
 
 <body>
     <!-- navbar -->
-    <?php require '../controllers/custmer.php';?>
-    <?php require 'partials/navbar.php'; ?>
+    <?php // require_once '../controllers/custmer.php'; ?>
+    <?php require_once 'partials/navbar.php'; ?>
     <!-- =============================================================== main  -->
     <main>
 
@@ -41,6 +48,7 @@
             if ($stmt && $stmt->num_rows > 0) {
                 $rowCounter = 0;
                 $cardCounter = 0;
+                
                 while ($row = $stmt->fetch_assoc()) {
                     if ($cardCounter < 18) {
                         if ($rowCounter % 6 == 0) {
@@ -51,6 +59,7 @@
                             echo '<div class="row">';
                         }
 
+                        echo '<a href=addtocart.php?id=' . htmlspecialchars($row['id']) . '>';
                         echo '<div class="col">';
                         echo '    <div>';
                         echo '        <img src="' . htmlspecialchars($row['image_url']) . '" alt="Product Image">';
@@ -62,6 +71,7 @@
                         echo '        <p><s>$' . htmlspecialchars($row['original_price']) . '</s></p>';
                         echo '    </div>';
                         echo '</div>';
+                        echo ' </a>';
                         $rowCounter++;
                         $cardCounter++;
                     }

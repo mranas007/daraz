@@ -708,3 +708,96 @@ body {
 .register-container .form-link:hover {
     text-decoration: underline;
 }
+
+
+/*  ========================== REGISTER PAGE  ========================== */
+
+/* background-color: #f4f4f4; */
+
+#addtocart header {
+    background-color: #ff6f61;
+    color: white;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#addtocart header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+#addtocart header nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+#addtocart {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#addtocart .products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+#addtocart .product {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.2s;
+    width: 200px;
+    text-align: center;
+}
+
+
+#addtocart .product img {
+    width: 100%;
+    height: auto;
+}
+
+#addtocart .product-details {
+    padding: 15px;
+}
+
+#addtocart .product-details h2 {
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+#addtocart .product-details .price {
+    font-size: 18px;
+    color: #333;
+    margin: 10px 0;
+}
+
+#addtocart .add-to-cart-btn {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border-radius: 5px;
+}
+
+#addtocart .add-to-cart-btn:hover {
+    background-color: #218838;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#addtocart .add-to-cart-btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(40, 167, 69, 0.5);
+}

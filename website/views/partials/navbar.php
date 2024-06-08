@@ -1,8 +1,9 @@
-<?php session_start();
-if ($_SESSION['isloggedin'] !== true) {
-   header("location: login.php");
-   exit; 
-}
+<?php
+// session_start();
+// if ($_SESSION['isloggedin'] !== true) {
+//    header("location: login.php");
+//    exit; 
+// }
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +12,7 @@ if ($_SESSION['isloggedin'] !== true) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../static/stylesheets/main.css">
 </head>
 
 <body>
@@ -51,9 +53,9 @@ if ($_SESSION['isloggedin'] !== true) {
 
                     <div id="navuser">
                         <span style=""><a href="#"><?php //require '../../controllers/custmer.php';
-                                                                while ($row = $name->fetch_assoc()) {
-                                                                    echo $row['email'];
-                                                                } ?></a></span>
+                                                               // while ($row = $name->fetch_assoc()) {
+                                                                  //echo $row['email'];
+                                                               //} ?></a></span>
                         <span class="user-hover"><i class="fa-solid fa-globe"></i> EN</span>
                         <span class="user-hover"><i class="fa-solid fa-cart-shopping"></i></span>
                     </div>
